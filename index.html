@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .preview 
+        {
+            width: 300px;
+            border: 15px solid green;
+            border-radius: 10% 5% 15% 25%;
+            padding: 50px;
+            margin: 20px;
+        }
+    </style>
+    <div class="preview", id="preview_box"></div>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="a">
+    </div>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="b">
+     </div>
+     <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="c">
+    </div>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="d">
+    </div>
+</body>
+<script>
+var slider_a = document.getElementById("a");
+var slider_b = document.getElementById("b");
+var slider_c = document.getElementById("c");
+var slider_d = document.getElementById("d");
+var preview_box = document.getElementById("preview_box");
+
+slider_a.oninput = function() {
+    preview_box.style.borderRadius = slider_a.value + "% " + slider_b.value + "% " + slider_c.value + "% " + slider_d.value + "%";
+}
+
+slider_b.oninput = function() {
+    preview_box.style.borderRadius = slider_a.value + "% " + slider_b.value + "% " + slider_c.value + "% " + slider_d.value + "%";
+}
+
+slider_c.oninput = function() {
+    preview_box.style.borderRadius = slider_a.value + "% " + slider_b.value + "% " + slider_c.value + "% " + slider_d.value + "%";
+}
+
+slider_d.oninput = function() {
+    preview_box.style.borderRadius = slider_a.value + "% " + slider_b.value + "% " + slider_c.value + "% " + slider_d.value + "%";
+}
+
+</script>
+</html>
